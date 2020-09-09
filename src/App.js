@@ -1,7 +1,7 @@
 import React, {useState , useEffect }from 'react';
 import "./App.css";
 import axios from 'axios'
-import Details from './Details'
+import Image from './Image'
 
 // axios.get('https://api.nasa.gov/planetary/apod?api_key=fcI9pOnhMomzQWEtDsONLAe9FbXG47uGfA94B25l')
 //   .then(res => {
@@ -12,15 +12,15 @@ import Details from './Details'
 //   })
 
 function App() {
-const [data, setData] = useState([])
-const [picture , setPicture] = useState(null)
+const [data, setData] = useState({})
+
 
 
 useEffect(() => {
   axios.get('https://api.nasa.gov/planetary/apod?api_key=fcI9pOnhMomzQWEtDsONLAe9FbXG47uGfA94B25l')
   .then(res => {
-    setPicture(res)ß
-    console.log(setPicture)
+    setData(res.data)
+    console.log(res.data)
   })
   .catch (error => {
     debugger
@@ -29,10 +29,9 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <Image
+      data = {data}
+      />
     </div>
   );
 }
