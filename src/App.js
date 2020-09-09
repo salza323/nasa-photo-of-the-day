@@ -2,6 +2,7 @@ import React, {useState , useEffect }from 'react';
 import "./App.css";
 import axios from 'axios'
 import Image from './Image'
+import Header from './Header'
 
 // axios.get('https://api.nasa.gov/planetary/apod?api_key=fcI9pOnhMomzQWEtDsONLAe9FbXG47uGfA94B25l')
 //   .then(res => {
@@ -28,7 +29,9 @@ useEffect(() => {
 }, [])
 
   return (
+    
     <div className="App">
+      <Header/>
       <Image
       data = {data}
       />
