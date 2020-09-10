@@ -24,7 +24,7 @@ useEffect(() => {
     console.log(res.data)
   })
   .catch (error => {
-    debugger
+    console.log('error')
   })
 }, [])
 
