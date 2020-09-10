@@ -11,18 +11,18 @@ const StyledImage = styled.div`
 
 
     img{
-        max-width: 100%;
+        max-width: 85%;
         border: none;
 
         transition: all 0.3s ease-in-out;
         &:hover{
             transition: all 0.3s ease-in-out;
-            border: 3px solid white;
+            border: 3px solid ${pr=> pr.theme.white};
         }
     }
 
     .explanation{
-        padding: ${pr => pr.theme.paddingLg}
+        padding: ${pr => pr.theme.paddingLg};
     }
 
     .credit{

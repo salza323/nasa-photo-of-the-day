@@ -18,12 +18,13 @@ const StyledHeader = styled.div`
     background-color: ${pr=> pr.theme.quaternaryColor};
     color: ${pr=> pr.theme.tertiaryColor};
     font-style: ${pr=> pr.theme.fontOne};
-    border-bottom: 3px solid ${pr=> pr.theme.tertiaryColor}
+    border-bottom: 3px solid ${pr=> pr.theme.tertiaryColor};
+    padding: ${pr=> pr.theme.paddingXl};
 `
 
 const Header = (props) =>  {
     return(
-        <StyledHeader className = 'App-header'>
+        <StyledHeader>
             <h1> Nasa Photo Of The Day</h1>
         </StyledHeader>
     )
