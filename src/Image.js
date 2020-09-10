@@ -5,10 +5,20 @@ const StyledImage = styled.div`
     padding: ${pr => pr.theme.paddingLg};
     background-color: ${pr => pr.theme.primaryColor};
     color: ${pr => pr.theme.secondaryColor};
+    border-top: 3px solid ${pr=> pr.theme.secondaryColor};
+
+    
 
 
     img{
         max-width: 100%;
+        border: none;
+
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            transition: all 0.3s ease-in-out;
+            border: 3px solid white;
+        }
     }
 
     .explanation{
@@ -17,7 +27,18 @@ const StyledImage = styled.div`
 
     .credit{
         background-color: ${pr=> pr.theme.quaternaryColor};
-        padding: ${pr=> pr.theme.paddingLg}
+        padding: ${pr=> pr.theme.paddingLg};
+        border: 3px solid ${pr=> pr.theme.secondaryColor};
+        color: ${pr=> pr.theme.primaryColor};
+
+        
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            background-color: ${pr=> pr.theme.primaryColor};
+            border: 3px solid ${pr=> pr.theme.tertiaryColor};
+            color: ${pr=> pr.theme.tertiaryColor};
+        }
     }
 `
 

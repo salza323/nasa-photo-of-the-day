@@ -18,6 +18,7 @@ const StyledHeader = styled.div`
     background-color: ${pr=> pr.theme.quaternaryColor};
     color: ${pr=> pr.theme.tertiaryColor};
     font-style: ${pr=> pr.theme.fontOne};
+    border-bottom: 3px solid ${pr=> pr.theme.tertiaryColor}
 `
 
 const Header = (props) =>  {
